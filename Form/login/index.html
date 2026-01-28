@@ -7,29 +7,74 @@
 </head>
 
 <style>
-    .page {
-        background-color: lightblue;
-        width:50%;
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+        line-height: 1.5;
+        background: lightgray;
+        flex-direction: column;
+        margin: 0 auto;
+        min-height: 100vh;
     }
 
-    .email {
-        margin: 10px auto;
-        display: block;
+    .main {
+        background-color: rgb(57, 57, 58);
+        border-radius: 15px;
+        box-shadow: rgb(207, 206, 206);
+        padding:10px 20px;
+        width:500px;
+        text-align: center;
     }
+
+
+    h1 {
+        color:white;
+    }
+
+    label {
+        color:white;
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        padding:10px;
+        box-sizing: border-box;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+
 </style>
 
 <body>
-    
-    <div class="page">
-        <h2 style="text-align: center;">Sign in to GitHub</h2>
-        
-        <div class="email">
-            <p>Email</p>
-            <input type="email"<h2></h>
 
-        </div>
+    <div class="main">
+        <h1>Login to GitHub</h1>
+
+        <form action="">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="name@mail.com" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+
+            <input type="submit" value="Login">
+
+        </form>
+
 
     </div>
+
 
 </body>
 </html>
