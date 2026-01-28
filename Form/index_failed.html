@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic HTML Form</title>
+</head>
+
+<style>
+    .top {
+        text-align: right;
+        line-height: 1px;
+    }
+
+    #note {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+    #login_1 {
+        display: block;
+        background-color: rgb(221, 223, 224);
+        color: black;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+
+    }
+    
+    #box {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        padding: 10px;
+        border-radius: 1px;
+
+    }
+
+    #title {
+        margin-left: auto;
+        margin-right: auto;
+        width:80%;
+    }
+        
+</style>
+
+<body>
+    <div class="top">
+        <p>Already have an account?</p>
+        <a href="./SignIn/index.html">Sign in</a>
+    </div>
+
+<h2>Sign for Github</h2>
+
+<a href="./email_login/index.html" id="login_1">Continue with Google</a><br>
+<a href="./apple_login/index.html" id="login_1">Continue with Apple</a>
+
+
+<form action="./submit.php" method="post">
+
+
+    <!-- email -->
+    <p id="title" for="email">Email</p>
+    <input type="email" id="box" name="email" placeholder="name@gmail.com">
+    
+    <!-- password -->
+    <p id="title" for="password">Password</p>
+    <input type="password" name="password" id="box" minlength="8"
+    placeholder="helloworld123@@$$">
+    <p id="note">Password should be at least 15 characters OR at least 8 characters including a number and a lowercase letter.</p>
+
+    <!-- username -->
+    <p id="title" for="username">Username*</p>
+    <input type="text" id="box" name="text" placeholder="Username">
+    <p id="note">Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen.
+    </p>
+
+    <!-- country -->
+    <p id="title" for="country">Your Country/Region*</p>
+    <select id="box" name="country">
+        <option value="cambodia">Cambodia</option>
+        <option value="usa">Unite State</option>
+        <option value="malaysia">Malaysia</option>
+    </select>
+
+    <!-- email preference -->
+    <p id="title" for="email_p" name="email_p">Email Preference</p>
+    <input type="checkbox" id="title" name="email_p_check">
+    <p id="note">Receive occasional product updates and announcements.</p>
+
+    <!-- submit -->
+    <input type="submit" id="box" value="Create account >">
+
+    <p id="note">By creating an account, you agree to the Terms of Service. For more information about GitHub's privacy practices, see the GitHub Privacy Statement. We'll occasionally send you account-related emails.</p>
+
+    
+
+    
+</form>
+
+</body>
+</html>
