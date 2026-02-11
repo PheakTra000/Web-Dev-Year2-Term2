@@ -1,100 +1,81 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
 
-  </head>
-  <body>
+        <header class="bg-white shadow-sm sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+                <img src="./images/images.png" alt="Logo" class="h-10">
+                
+                <nav class="hidden md:flex gap-8 font-medium text-gray-700">
+                    <a href="#home" class="hover:text-green-500 transition">Home</a>
+                    <a href="#service" class="hover:text-green-500 transition">Service</a>
+                    <a href="#feature" class="hover:text-green-500 transition">Feature</a>
+                    <a href="#product" class="hover:text-green-500 transition">Product</a>
+                    <a href="#testimonial" class="hover:text-green-500 transition">Testimonial</a>
+                    <a href="#faq" class="hover:text-green-500 transition">FAQ</a>
+                </nav>
 
-    <header class="bg-gray-100 p-5 flex justify-between items-center">
-      <div>
-        <img src="./images/images.png" width="20%">
-      </div>
+                <div class="flex gap-4">
+                    <a href="#login" class="text-gray-700 font-medium hover:text-green-500 transition">Login</a>
+                    <button class="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition">Sign Up</button>
+                </div>
+            </div>
+        </header>
 
-      <div class="space-x-9 font-mono"> 
-            <a href="#home">Home</a>
-            <a href="#service">Service</a>
-            <a href="#feature">Feature</a>
-            <a href="#product">Product</a>
-            <a href="#testimonial">Testimonial</a>
-            <a href="#faq">FAQ</a>
-        </div>
+        <section class="max-w-7xl mx-auto px-6 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-5xl font-bold mb-4">Lessons and insights <span class="text-green-500">from 8 years</span></h1>
+                    <p class="text-gray-600 mb-6">Where to grow your business as a photographer: site or social media?</p>
+                    <button class="px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition font-medium">Register</button>
+                </div>
+                <img src="./images/1_B3iayyaMtQX35qNOX9-OMg.jpg" alt="Hero" class="rounded-lg shadow-lg w-full">
+            </div>
+        </section>
 
-      <div class="space-x-9 font-mono"> 
-            <a href="#login">Login</a>
-            <a href="#signup">Sign Up</a>
-        </div> 
+        <section class="bg-gray-50 py-20">
+            <div class="max-w-7xl mx-auto px-6 text-center mb-12">
+                <h2 class="text-4xl font-bold mb-2">Our Clients</h2>
+                <p class="text-gray-600">We have been working with some Fortune 500+ clients</p>
+            </div>
 
-    </header>
+            <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+                <h2 class="text-4xl font-bold mb-2">Manage your entire community in a single system</h2>
+                <p class="text-gray-600">Who is Nexcent suitable for?</p>
+            </div>
 
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+                    <img src="./images/card1.jpg" alt="Membership Organisation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Membership Organisation</h3>
+                        <p class="text-gray-600">Our membership management software provides full automation of membership renewals and payments.</p>
+                    </div>
+                </div>
 
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+                    <img src="./images/card2.jpg" alt="National Associations" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">National Associations</h3>
+                        <p class="text-gray-600">Streamline operations and centralise member data for large-scale associations and federations.</p>
+                    </div>
+                </div>
 
-    <div class="flex items-center justify-between p-10 bg-gray-50 space-x-9">
-      <div class="flex flex-col ">
-        <div class=" ">
-          <p class="text-5xl font-bold">Lessons and insights</p>
-          <p class="text-5xl font-bold text-green-500">From 8 years</p>       
-          <p>Where to grow your business as a photographer: site or social media?</p>
-        </div>
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+                    <img src="./images/card3.jpg" alt="Clubs And Groups" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Clubs And Groups</h3>
+                        <p class="text-gray-600">Simple tools for small clubs and groups to manage subscriptions, events, and communications.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-          <button class="px-5 py-2 bg-green-500 text-white rounded-lg mt-5 w-32">
-            Register
-          </button>
-      </div> 
-
-      <div class="bg-blue justify-end">
-        <img src="./images/1_B3iayyaMtQX35qNOX9-OMg.jpg" sizes="(max-width: 600px) 100vw, 50vw" width="500" height="500">
-      </div>
-
-    </div>
-    
-    <div class="flex flex-col justify-center">
-      <div class="flex flex-col items-center p-10">
-        <h2 class="text-2xl font-bold-70">Our Clients</h2>
-        <p class="text-sm">We have been working with some Fortune 500+ clients</p>
-      </div>
-
-      <div class="bg-black">
-        logo of buinesses
-      </div>
-
-      <div class="flex flex-col items-center p-10">
-        <h2 class="text-2xl font-bold-50">Manage your entire community in a single system</h2>
-        <p class="text-sm">Who is Nexcent suitable for?</p>
-      </div>
-
-      
-    </div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-10">
-      <div class="card bg-base-100 shadow-xl">
-      <figure><img src="./images/card1.jpg" alt="Membership Organisation" class="w-full h-48 object-cover rounded-t-xl"></figure>
-      <div class="card-body">
-        <h2 class="card-title">Membership Organisation</h2>
-        <p>Our membership management software provides full automation of membership renewals and payments.</p>
-      </div>
-      </div>
-
-      <div class="card bg-base-100 shadow-xl">
-      <figure><img src="./images/card2.jpg" alt="National Associations" class="w-full h-48 object-cover rounded-t-xl"></figure>
-      <div class="card-body">
-        <h2 class="card-title">National Associations</h2>
-        <p>Streamline operations and centralise member data for large-scale associations and federations.</p>
-      </div>
-      </div>
-
-      <div class="card bg-base-100 shadow-xl">
-      <figure><img src="./images/card3.jpg" alt="Clubs And Groups" class="w-full h-48 object-cover rounded-t-xl"></figure>
-      <div class="card-body">
-        <h2 class="card-title">Clubs And Groups</h2>
-        <p>Simple tools for small clubs and groups to manage subscriptions, events, and communications.</p>
-      </div>
-      </div>
-    </div>
-
-  </body>
+    </body>
 </html>
