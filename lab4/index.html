@@ -29,79 +29,52 @@
     <button class="btn" onclick="greet()">Show Greeting</button>
 
     <h3 class="text-2xl">Caesar Cipher</h3>
-    <div class=" border ">
-        <table id="table1">
+    <div class="space-y-4">
+        <table class="table w-full border ">
             <tr>
+
                 <td>Plaintext:</td>
-                <td><input type="text" id="originalText" value="HELLO"></td>
+                <td><input class="input w-full" type="text" id="originalText" value="HELLO"></td>
             </tr>
             <tr>
                 <td>Shift:</td>
-                <td><input type="number" id="shiftValue" value="3"></td>
+                <td><input class="input w-full" type="number" id="shiftValue" value="3"></td>
             </tr>
             <tr>
-                <td></td>
-                <td><input type="text" id="encryptedText" readonly></td>
+                <td>Encrypted</td>
+                <td><input class="input w-full" type="text" id="encryptedText" readonly></td>
             </tr>
         </table>
+            
     </div>
-<button onclick="caesarCipher()">Encrypt</button>
+
+    <div class="flex  justify-center">
+        <button class="btn " onclick="caesarCipher()">Encrypt</button>
+    </div>
+
     
 
 
-<div    ">
-  <table class="table">
-    <!-- head -->
-    <thead>
-      <tr>
-        <th></th>
-        <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- row 1 -->
-      <tr>
-        <th>1</th>
-        <td>Cy Ganderton</td>
-        <td>Quality Control Specialist</td>
-        <td>Blue</td>
-      </tr>
-      <!-- row 2 -->
-      <tr>
-        <th>2</th>
-        <td>Hart Hagerty</td>
-        <td>Desktop Support Technician</td>
-        <td>Purple</td>
-      </tr>
-      <!-- row 3 -->
-      <tr>
-        <th>3</th>
-        <td>Brice Swyre</td>
-        <td>Tax Accountant</td>
-        <td>Red</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+    <div>
+        <table class="table w-full border">
+            <tr>
+                <td>Encrypted Text:</td>
+                <td><input class="input w-full" type="text" id="cipherText" value="KHOOR"></td>
+            </tr>
+            <tr>
+                <td>Shift:</td>
+                <td><input class="input w-full" type="number" id="decShiftValue" value="3"></td>
+            </tr>
+            <tr>
+                <td>Decrypted</td>
+                <td><input class="input w-full" type="text" id="decryptedText" readonly></td>
+            </tr>
+        </table>
+    </div>
 
+    <div class="flex  justify-center"ls>
+        <button class="btn" onclick="caesarDecipher()">Decrypt</button>
 
-
-    <table id="table2">
-        <tr>
-            <td>Encrypted Text:</td>
-            <td><input type="text" id="cipherText" value="KHOOR"></td>
-        </tr>
-        <tr>
-            <td>Shift:</td>
-            <td><input type="number" id="decShiftValue" value="3"></td>
-        </tr>
-        <tr>
-            <td><button onclick="caesarDecipher()">Decrypt</button></td>
-            <td><input type="text" id="decryptedText" readonly></td>
-        </tr>
-    </table>
  
     </div>
    
