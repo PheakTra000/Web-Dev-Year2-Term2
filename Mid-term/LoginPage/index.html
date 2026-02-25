@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIS</title>
+</head>
+
+<style>
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+        line-height: 1.5;
+        background: lightgray;
+        flex-direction: column;
+        margin: 0 auto;
+        min-height: 100vh;
+    }
+
+    .main {
+        background-color: rgb(57, 57, 58);
+        border-radius: 15px;
+        box-shadow: rgb(207, 206, 206);
+        padding:10px 20px;
+        width:500px;
+        text-align: center;
+    }
+
+
+    h1 {
+        color:white;
+    }
+
+    label {
+        color:white;
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        padding:10px;
+        box-sizing: border-box;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+
+</style>
+
+<body>
+
+    <div class="main">
+        <h1>CIS</h1>
+
+        <form id="myform">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="name@mail.com" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+
+            <input type="submit" value="Login">
+
+        </form>
+
+
+    </div>
+
+
+</body>
+
+
+<script>
+    const myform = document.getElementById('myform')
+    
+    myform.addEventListener('submit', (event) => {
+        event.preventDefault();  
+        let email = document.getElementById("email").value;
+        let pass = document.getElementById("password").value;
+        console.log(email, pass);
+        if (email =='admin@mail.com' && pass == 'admin123') {
+            window.location.replace("../AdminPage/index.html");
+        } else if (email =='nurse@mail.com' && pass == 'nurse123') {
+            window.location.replace("../NursePage/index.html");
+        }
+    });
+
+
+    
+
+</script>
+</html>
