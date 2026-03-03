@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+</head>
+
+<style>
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+        line-height: 1.5;
+        background: lightgray;
+        flex-direction: column;
+        margin: 0 auto;
+        min-height: 100vh;
+    }
+
+    .main {
+        background-color: rgb(57, 57, 58);
+        border-radius: 15px;
+        box-shadow: rgb(207, 206, 206);
+        padding:10px 20px;
+        width:500px;
+        text-align: center;
+    }
+
+
+    h1 {
+        color:white;
+    }
+
+    label {
+        color:white;
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        padding:10px;
+        box-sizing: border-box;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+
+</style>
+
+<body>
+
+    <div class="main">
+        <h1>Login to My Heart</h1>
+
+        <form action="">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    
+</body>
+
+<script>
+
+    function setCookie(name, value, days) {
+        const d = new Date();
+        d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + d.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    }
+
+    function getCookie(name) {
+        const cname = name + "=";
+        const decodedCookie = decodeURIComponent(document.cookie);
+        const ca = decodedCookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(cname) == 0) {
+                return c.substring(cname.length, c.length);
+            }
+        }
+        return "";
+    }
+
+
+
+    function deleteCookie(name) {
+        document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    }
+    
+    function clearCookies() {
+        deleteCookie("username");
+        alert("Cookies cleared!");
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        const username = document.getElementById("username").value;
+        if (username) {
+            setCookie("username", username, 30);
+            alert("Welcome " + username);
+            redirectToRegister();
+        }
+    }
+
+    document.querySelector("form").addEventListener("submit", handleSubmit);
+
+    function init() {
+        checkCookie();
+    }
+
+    function clearAllCookies() {
+        const cookies = document.cookie.split(";");
+
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i];
+            const eqPos = cookie.indexOf("=");
+            const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+    }   
+
+    function redirectToRegister() {
+        window.location.href = "RegisterPage/index.html";
+    }
+
+    window.onload = function() {
+        const username = getCookie("username");
+        if (username != "") {
+            console.log("Cookie exists, staying on page.");
+            redirectToRegister();
+        } else {
+            console.log("Cookie does not exist.");
+            init();
+        }
+    };
+
+
+ 
+</script>
+
+
+</html>
